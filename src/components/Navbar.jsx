@@ -1,10 +1,21 @@
 import { NavLink, Outlet } from "react-router-dom";
+import "../routers/styles/index.css"
 
 function Navbar(){
     return (
         <>
-        <nav>
-            <NavLink to="/">Home</NavLink> | <NavLink to="/projects">Projek</NavLink> | <NavLink to="/about">About</NavLink>
+        <nav className="navbar">
+            <NavLink
+            className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}
+            to="/">Home</NavLink>
+             | 
+            <NavLink 
+             className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}
+             to="/projects">Projek</NavLink>
+              | 
+            <NavLink 
+            className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}
+            to="/about">About</NavLink>
         </nav>
         <p/>
         <Outlet />
