@@ -15,6 +15,14 @@ function Navbar(){
               | 
             <NavLink 
             className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}
+            to="/todo">ToDo</NavLink>
+              | 
+            <NavLink 
+            className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}
+            to="/user">User</NavLink>
+              | 
+            <NavLink 
+            className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}
             to="/about">About</NavLink>
         </nav>
         <p/>
